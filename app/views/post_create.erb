@@ -1,0 +1,12 @@
+<h1>Create New Post under <%= @category.post_name%></h1>
+
+<form action="/categories/<%= @category.id%>/posts" method="post">
+  <p>Name: <input type="text" name="post[name]"></p>
+  <p>Phone number: <input type="text" name="post[phone]"></p>
+  <p>Email: <input type="text" name="post[email]"></p>
+  <p>Title:<input type="text" name="post[title]"></p>
+  <textarea cols="60" rows="10" name="post[desc]">Please describe what you are selling.</textarea>
+<br>
+    <input type="submit" value="Submit">
+
+</form>

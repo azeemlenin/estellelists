@@ -1,0 +1,8 @@
+<h1>JK & Azeem Craigslist</h1>
+
+<h2>Please select from the following posts.</h2>
+
+<% @all.each do |post| %>
+  <a href="/posts/<%= post.id%>"><%= post.title %></a><br>
+
+<% end %>

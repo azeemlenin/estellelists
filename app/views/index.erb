@@ -1,0 +1,9 @@
+<h1>JK & Azeem Craigslist</h1>
+
+<h2>Please select from the following categories:</h2>
+  <% @categories.each do |category|%>
+    <a href="/categories/<%=category.id %>"><%= category.post_name%></a><br>
+  <%end%>
+
+<br>
+

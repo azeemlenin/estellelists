@@ -1,0 +1,12 @@
+<h1>Welcome to <%= @category.post_name %></h1>
+
+<a href="/categories/<%=@category.id%>/posts/new">Create Post</a>
+
+<h2>Please select from the following posts.</h2>
+
+<% @category.posts.each do |post| %>
+  <a href="/categories/<%=@category.id%>/posts/<%= post.id%>" ><%= post.title %></a>
+<% end %>
+
+
+

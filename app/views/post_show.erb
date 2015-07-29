@@ -1,0 +1,25 @@
+<h1>Post Info</h1>
+
+<p>Category name: <%= @category.post_name%></p>
+
+<p>Post title: <%= @post.title%></p>
+
+<p>Post name: <%= @post.name%></p>
+<p>Post email: <%= @post.email%></p>
+<p>Post phone: <%= @post.phone%></p>
+<p>Post desc: <%= @post.desc%></p>
+<p>Post updated_at: <%= @post.updated_at%></p>
+<p>Post created_at: <%= @post.created_at%></p>
+
+<a href="/categories/<%= @category.id%>/posts/<%= @post.id%>/edit">Edit this post"></a>
+
+
+
+<form action="/categories/<%= @category.id%>/posts/<%= @post.id%>" method="post">
+
+  <input type="hidden" name="_method" value="delete">
+
+    <input type="submit" value="Delete this post">
+
+</form>
+
