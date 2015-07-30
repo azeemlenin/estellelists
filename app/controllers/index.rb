@@ -22,15 +22,12 @@ post "/categories" do
 end
 
 get "/categories/:category_id/edit" do
-
 end
 
 puts "/categories" do
-
 end
 
 delete "/categories/:c_id" do
-
 end
 
 #posts
@@ -66,6 +63,13 @@ end
 get "/categories/:category_id/posts/:p_id/edit" do
   @category = Category.find(params[:category_id])
   @post = Post.find(params[:p_id])
+  @secreto = Post.find(params[:p_secret])
+
+  if @secreto == @post.secret
+
+  else
+
+  end
   erb :post_edit
 end
 
